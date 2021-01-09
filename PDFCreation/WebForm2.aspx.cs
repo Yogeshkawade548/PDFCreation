@@ -70,10 +70,10 @@ namespace PDFCreation
                 element.Brush = PdfBrushes.Blue;
                 result = element.Draw(page, 10, result.Bounds.Bottom + 20);
 
-                byte[] imageData = (byte[])ds.Tables[1].Rows[0][3];
-                MemoryStream ms = new MemoryStream(imageData);
-                PdfBitmap customerImage = new PdfBitmap(ms);
-                graphics.DrawImage(customerImage, 410, result.Bounds.Bottom - 14, 100, 100);
+                //byte[] imageData = (byte[])ds.Tables[1].Rows[0][3];
+                //MemoryStream ms = new MemoryStream(imageData);
+                //PdfBitmap customerImage = new PdfBitmap(ms);
+                //graphics.DrawImage(customerImage, 410, result.Bounds.Bottom - 14, 100, 100);
 
                 element = new PdfTextElement(ds.Tables[1].Rows[0][0].ToString(), textFont);
                 result = element.Draw(page, 15, result.Bounds.Bottom);
